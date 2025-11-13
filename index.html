@@ -73,19 +73,21 @@
     }
 
     a.link {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
       background: var(--btn-bg);
       color: var(--btn-text);
       margin: 10px 0;
-      padding: 14px;
+      padding: 14px 18px;
       border-radius: 10px;
       text-decoration: none;
       font-weight: 600;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
+      width: 100%;
+      direction: rtl;
+      gap: 8px;
     }
 
     a.link:hover {
@@ -96,6 +98,7 @@
 
     a.link i {
       font-size: 1.4rem;
+      margin-right: 5px;
     }
 
     footer {
@@ -172,21 +175,21 @@
     <h1>اسمك الجميل</h1>
     <p class="bio">نبذة قصيرة عنك أو عن عملك الشخصي.</p>
 
-    <!-- روابط المنصات -->
-    <a href="#" class="link"><i class="fab fa-facebook-f"></i> Facebook</a>
-    <a href="#" class="link"><i class="fab fa-tiktok"></i> TikTok</a>
-    <a href="#" class="link"><i class="fa-brands fa-threads"></i> Threads</a>
-    <a href="#" class="link"><i class="fab fa-x-twitter"></i> X (Twitter)</a>
-    <a href="#" class="link"><i class="fab fa-instagram"></i> Instagram</a>
-    <a href="#" class="link"><i class="fab fa-telegram"></i> Telegram</a>
-    <a href="#" class="link"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    <a href="#" class="link"><i class="fab fa-reddit"></i> Reddit</a>
-    <a href="#" class="link"><i class="fab fa-snapchat"></i> Snapchat</a>
-    <a href="#" class="link"><i class="fab fa-behance"></i> Behance</a>
-    <a href="mailto:example@email.com" class="link"><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</a>
-    <a href="#" class="link"><i class="fab fa-github"></i> GitHub</a>
-    <a href="#" class="link"><i class="fab fa-paypal"></i> PayPal</a>
-    <a href="#" class="link"><i class="fab fa-tumblr"></i> Tumblr</a>
+    <!-- روابط المنصات (الاسم أولاً ثم الأيقونة) -->
+    <a href="#" class="link">Facebook <i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="link">TikTok <i class="fab fa-tiktok"></i></a>
+    <a href="#" class="link">Threads <i class="fa-brands fa-threads"></i></a>
+    <a href="#" class="link">X (Twitter) <i class="fab fa-x-twitter"></i></a>
+    <a href="#" class="link">Instagram <i class="fab fa-instagram"></i></a>
+    <a href="#" class="link">Telegram <i class="fab fa-telegram"></i></a>
+    <a href="#" class="link">LinkedIn <i class="fab fa-linkedin"></i></a>
+    <a href="#" class="link">Reddit <i class="fab fa-reddit"></i></a>
+    <a href="#" class="link">Snapchat <i class="fab fa-snapchat"></i></a>
+    <a href="#" class="link">Behance <i class="fab fa-behance"></i></a>
+    <a href="mailto:example@email.com" class="link">البريد الإلكتروني <i class="fa-solid fa-envelope"></i></a>
+    <a href="#" class="link">GitHub <i class="fab fa-github"></i></a>
+    <a href="#" class="link">PayPal <i class="fab fa-paypal"></i></a>
+    <a href="#" class="link">Tumblr <i class="fab fa-tumblr"></i></a>
 
     <footer>© 2025 - صُنع بحب ❤️</footer>
   </div>
@@ -195,7 +198,7 @@
   <button id="toTop" title="العودة للأعلى">⬆</button>
 
   <script>
-    // تبديل الوضع الليلي والنهاري
+    // تبديل الوضع الليلي
     const toggleBtn = document.getElementById('themeToggle');
     toggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('dark');
@@ -203,7 +206,7 @@
       localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
     });
 
-    // حفظ التفضيل
+    // حفظ الوضع السابق
     if (localStorage.getItem('theme') === 'dark') {
       document.body.classList.add('dark');
       toggleBtn.textContent = '☀️';
