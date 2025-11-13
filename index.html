@@ -72,21 +72,23 @@
       opacity: 0.85;
     }
 
+    /* ====== الأزرار ====== */
     a.link {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       justify-content: center;
       background: var(--btn-bg);
       color: var(--btn-text);
-      margin: 10px 0;
-      padding: 14px 18px;
+      margin: 8px 0;
+      padding: 12px 10px;
       border-radius: 10px;
       text-decoration: none;
       font-weight: 600;
+      font-size: 1rem;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
       width: 100%;
-      direction: rtl;
+      max-width: 100%;
       gap: 8px;
     }
 
@@ -97,8 +99,8 @@
     }
 
     a.link i {
-      font-size: 1.4rem;
-      margin-right: 5px;
+      font-size: 1.2rem;
+      opacity: 0.85;
     }
 
     footer {
@@ -107,7 +109,7 @@
       font-size: 0.9rem;
     }
 
-    /* زر الوضع الليلي في الأسفل يسار */
+    /* زر الوضع الليلي */
     .theme-toggle {
       position: fixed;
       bottom: 20px;
@@ -161,7 +163,8 @@
 
     @media (max-width: 480px) {
       .container { padding: 20px; }
-      h1 { font-size: 1.4rem; }
+      a.link { font-size: 0.95rem; padding: 11px 8px; }
+      i { font-size: 1.1rem; }
     }
   </style>
 </head>
@@ -198,7 +201,7 @@
   <button id="toTop" title="العودة للأعلى">⬆</button>
 
   <script>
-    // تبديل الوضع الليلي
+    // تبديل الوضع الليلي والنهاري
     const toggleBtn = document.getElementById('themeToggle');
     toggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('dark');
@@ -206,7 +209,7 @@
       localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
     });
 
-    // حفظ الوضع السابق
+    // حفظ الوضع المختار
     if (localStorage.getItem('theme') === 'dark') {
       document.body.classList.add('dark');
       toggleBtn.textContent = '☀️';
