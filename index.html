@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html><html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,218 +16,195 @@
       --btn-text: #333;
       --btn-hover-bg: #4c5cc5;
       --btn-hover-text: #fff;
-    }
-
-    body.dark {
-      --bg: #1f1f1f;
-      --text: #f9f9f9;
-      --card: #2c2c2c;
-      --btn-bg: #333;
-      --btn-text: #fff;
-      --btn-hover-bg: #7d8bff;
-      --btn-hover-text: #fff;
-    }
-body.dark hr {
-  border-top: 2px solid #fff !important;
+    }body.dark {
+  --bg: #1f1f1f;
+  --text: #f9f9f9;
+  --card: #2c2c2c;
+  --btn-bg: #333;
+  --btn-text: #fff;
+  --btn-hover-bg: #7d8bff;
+  --btn-hover-text: #fff;
 }
 
+body.dark hr { border-top: 2px solid #fff !important; }
+
+body { background-color: #f8f9fa; text-align: center; font-family: 'Tahoma', sans-serif; direction: rtl; } img { max-width: 90%; height: auto; border-radius: 10px; margin-top: 40px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+
 body {
-      background-color: #f8f9fa;
-      text-align: center;
-      font-family: 'Tahoma', sans-serif;
-      direction: rtl;
-    }
-    img {
-      max-width: 90%;
-      height: auto;
-      border-radius: 10px;
-      margin-top: 40px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Cairo", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  min-height: 100vh;
+  transition: background 0.4s ease, color 0.4s ease;
+}
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: "Cairo", sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 30px;
-      min-height: 100vh;
-      transition: background 0.4s ease, color 0.4s ease;
-    }
+.container {
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+  background: var(--card);
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
 
-    .container {
-      text-align: center;
-      max-width: 420px;
-      width: 100%;
-      background: var(--card);
-      border-radius: 20px;
-      padding: 30px 20px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
+img.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--primary);
+  margin-bottom: 15px;
+  object-fit: cover;
+}
 
-    img.avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 4px solid var(--primary);
-      margin-bottom: 15px;
-      object-fit: cover;
-    }
+h1 {
+  font-size: 1.6rem;
+  margin: 10px 0;
+}
 
-    h1 {
-      font-size: 1.6rem;
-      margin: 10px 0;
-    }
+p.bio {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  opacity: 0.85;
+}
 
-    p.bio {
-      font-size: 1rem;
-      margin-bottom: 25px;
-      opacity: 0.85;
-    }
+a.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  margin: 8px 0;
+  padding: 12px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  gap: 8px;
+}
 
-    a.link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--btn-bg);
-      color: var(--btn-text);
-      margin: 8px 0;
-      padding: 12px 10px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-      width: 100%;
-      max-width: 100%;
-      gap: 8px;
-    }
+a.link:hover {
+  background: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
+  transform: translateY(-3px);
+}
 
-    a.link:hover {
-      background: var(--btn-hover-bg);
-      color: var(--btn-hover-text);
-      transform: translateY(-3px);
-    }
+a.link i {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
 
-    a.link i {
-      font-size: 1.2rem;
-      opacity: 0.85;
-    }
+footer {
+  margin-top: 25px;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
 
-    footer {
-      margin-top: 25px;
-      opacity: 0.7;
-      font-size: 0.9rem;
-    }
+hr {
+  border: 0;
+  border-top: 2px solid #000;
+  margin: 15px 0;
+  width: 100%;
+}
 
-    hr {
-      border: 0;
-      border-top: 2px solid #000;
-      margin: 15px 0;
-      width: 100%;
-    }
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+.theme-toggle:hover {
+  transform: rotate(25deg) scale(1.1);
+  background: var(--secondary);
+}
 
-    .theme-toggle {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: var(--primary);
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      font-size: 1.3rem;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-      transition: all 0.3s ease;
-      z-index: 100;
-    }
-    .theme-toggle:hover {
-      transform: rotate(25deg) scale(1.1);
-      background: var(--secondary);
-    }
+#toTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 100;
+}
 
-    #toTop {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--primary);
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      cursor: pointer;
-      font-size: 1.3rem;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.4s ease;
-      z-index: 100;
-    }
+#toTop.show {
+  opacity: 1;
+  visibility: visible;
+}
 
-    #toTop.show {
-      opacity: 1;
-      visibility: visible;
-    }
+#toTop:hover {
+  background: var(--secondary);
+  transform: scale(1.1);
+}
 
-    #toTop:hover {
-      background: var(--secondary);
-      transform: scale(1.1);
-    }
+@media (max-width: 480px) {
+  .container { padding: 20px; }
+  a.link { font-size: 0.95rem; padding: 11px 8px; }
+  i { font-size: 1.1rem; }
+}
 
-    @media (max-width: 480px) {
-      .container { padding: 20px; }
-      a.link { font-size: 0.95rem; padding: 11px 8px; }
-      i { font-size: 1.1rem; }
-    }
   </style>
-</head>
-
-<body>
-  <button class="theme-toggle" id="themeToggle" title="تبديل الوضع">🌙</button>
-
- <center>
+</head><body>
+  <button class="theme-toggle" id="themeToggle" title="تبديل الوضع">🌙</button> <center>
   <img alt="سبحان الله" src="https://www.ashefaa.com/files/twage3/z23.gif">
   </center>
-  <br/>
-
-  <div class="container">
+  <br/>  <div class="container">
     <img class="avatar" src="https://i.imgur.com/E3ltnz5.png" alt="صورتك" />
     <h1>Fared. M</h1>
     <p class="bio">‏(سبحان الله وبحمده - سبحان الله العظيم)
 جيمزر PC 🎮 أندرويد 🤳 وبس (🍉🍋🍎)
 <br>
-👇👇👇 جميع الروابط 👇👇👇</p>
+👇👇👇 جميع الروابط 👇👇👇</p><!-- روابط المواقع -->
 
-    <!-- روابط المواقع -->
 <center>
 <hr>
 <center>مواقع التواصل الإجتماعي<center/>
 <hr>
-    <a href="#" class="link">Facebook <i class="fab fa-facebook-f"></i></a>
-    <a href="#" class="link">TikTok <i class="fab fa-tiktok"></i></a>
-    <a href="#" class="link">Threads <i class="fa-brands fa-threads"></i></a>
-    <a href="#" class="link">X (Twitter) <i class="fab fa-x-twitter"></i></a>
-    <a href="#" class="link">Instagram <i class="fab fa-instagram"></i></a>
-    <a href="#" class="link">Telegram <i class="fab fa-telegram"></i></a>
-    <a href="#" class="link">LinkedIn <i class="fab fa-linkedin"></i></a>
-    <a href="#" class="link">Reddit <i class="fab fa-reddit"></i></a>
-    <a href="#" class="link">Snapchat <i class="fab fa-snapchat"></i></a>
-    <a href="#" class="link">Behance <i class="fab fa-behance"></i></a>
+    <a href="https://www.facebook.com/farednew123" class="link">Facebook <i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.tiktok.com/@fared25" class="link">TikTok <i class="fab fa-tiktok"></i></a>
+    <a href="https://www.Threads.com/farednew123" class="link">Threads <i class="fa-brands fa-threads"></i></a>
+    <a href="https://twitter.com/farednew123" class="link">X (Twitter) <i class="fab fa-x-twitter"></i></a>
+    <a href="https://www.instagram.com/farednew123" class="link">Instagram <i class="fab fa-instagram"></i></a>
+    <a href="https://t.me/fared25" class="link">Telegram <i class="fab fa-telegram"></i></a>
+    <a href="https://www.linkedin.com/farednew123" class="link">LinkedIn <i class="fab fa-linkedin"></i></a>
+    <a href="https://www.reddit.com/user/fared25/" class="link">Reddit <i class="fab fa-reddit"></i></a>
+    <a href="https://www.snapchat.com/add/fared25" class="link">Snapchat <i class="fab fa-snapchat"></i></a>
+    <a href="https://www.behance.net/farednew123" class="link">Behance <i class="fab fa-behance"></i></a>
     <a href="mailto:example@email.com" class="link">البريد الإلكتروني <i class="fa-solid fa-envelope"></i></a>
-    <a href="#" class="link">GitHub <i class="fab fa-github"></i></a>
-    <a href="#" class="link">PayPal <i class="fab fa-paypal"></i></a>
-    <a href="#" class="link">Tumblr <i class="fab fa-tumblr"></i></a>
+    <a href="https://github.com/fared25" class="link">GitHub <i class="fab fa-github"></i></a>
+    <a href="https://www.paypal.me/mrfared" class="link">PayPal <i class="fab fa-paypal"></i></a>
+    <a href="https://www.tumblr.com/fared25" class="link">Tumblr <i class="fab fa-tumblr"></i></a>
 <center>
-    <!-- فاصل وخانتان فارغتان -->
-    
-<hr>
+    <!-- فاصل وخانتان فارغتان --><hr>
 <center>تطبيقات من إنشائي<center/>
 <hr>
     <a href="https://play.google.com/store/apps/details?id=come.google.app.Video_Games" class="link">اخبار العاب الفيديو<i class="fa-solid fa-gamepad"></i></a>
@@ -237,12 +213,9 @@ body {
 <center>ادعمني بالتبرع<center/>
 <hr>
     <a href="https://tip.dokan.sa/fared25" class="link">Visa - Mada - Google Pay - STC Pay<i class="fa-brands fa-cc-visa"></i></a>
-    <a href="https://www.paypal.me/mrfared" class="link">PayPal <i class="fa-brands fa-cc-paypal"></i></a>
-    
-    <footer>© 2025 - صُنع بحب ❤️</footer>
-  </div>
+    <a href="https://www.paypal.me/mrfared" class="link">PayPal <i class="fa-brands fa-cc-paypal"></i></a><footer>© 2025 - صُنع بحب ❤️</footer>
 
-  <button id="toTop" title="العودة للأعلى">⬆️</button>
+  </div><button id="toTop" title="العودة للأعلى">⬆️</button>
 
   <script>
     const toggleBtn = document.getElementById('themeToggle');
@@ -281,6 +254,5 @@ if (localStorage.getItem('theme') === 'dark') {
     toTop.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-  </script>
-</body>
+  </script></body>
 </html>
