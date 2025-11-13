@@ -246,16 +246,29 @@ body {
 
   <script>
     const toggleBtn = document.getElementById('themeToggle');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      toggleBtn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
-      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
-    });
+const avatarImg = document.querySelector('.avatar');
 
-    if (localStorage.getItem('theme') === 'dark') {
-      document.body.classList.add('dark');
-      toggleBtn.textContent = '☀️';
-    }
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  toggleBtn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+  localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+
+  // تغيير الصورة حسب الوضع الليلي
+  if (document.body.classList.contains('dark')) {
+    avatarImg.src = 'https://i.imgur.com/mCvhurI.png';
+  } else {
+    avatarImg.src = 'https://i.imgur.com/E3ltnz5.png';
+  }
+});
+
+// عند تحميل الصفحة والتحقق من الوضع الليلي المحفوظ
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark');
+  toggleBtn.textContent = '☀️';
+  avatarImg.src = 'https://i.imgur.com/mCvhurI.png';
+} else {
+  avatarImg.src = 'https://i.imgur.com/E3ltnz5.png';
+}
 
     const toTop = document.getElementById('toTop');
     window.addEventListener("scroll", () => {
