@@ -72,7 +72,6 @@
       opacity: 0.85;
     }
 
-    /* ====== الأزرار ====== */
     a.link {
       display: flex;
       align-items: center;
@@ -109,7 +108,13 @@
       font-size: 0.9rem;
     }
 
-    /* زر الوضع الليلي */
+    hr {
+      border: 0;
+      border-top: 2px solid #000;
+      margin: 15px 0;
+      width: 100%;
+    }
+
     .theme-toggle {
       position: fixed;
       bottom: 20px;
@@ -131,7 +136,6 @@
       background: var(--secondary);
     }
 
-    /* زر الصعود للأعلى */
     #toTop {
       position: fixed;
       bottom: 20px;
@@ -170,7 +174,6 @@
 </head>
 
 <body>
-  <!-- زر الوضع الليلي في الأسفل يسار -->
   <button class="theme-toggle" id="themeToggle" title="تبديل الوضع">🌙</button>
 
   <div class="container">
@@ -178,7 +181,7 @@
     <h1>اسمك الجميل</h1>
     <p class="bio">نبذة قصيرة عنك أو عن عملك الشخصي.</p>
 
-    <!-- روابط المنصات (الاسم أولاً ثم الأيقونة) -->
+    <!-- روابط المواقع -->
     <a href="#" class="link">Facebook <i class="fab fa-facebook-f"></i></a>
     <a href="#" class="link">TikTok <i class="fab fa-tiktok"></i></a>
     <a href="#" class="link">Threads <i class="fa-brands fa-threads"></i></a>
@@ -194,14 +197,20 @@
     <a href="#" class="link">PayPal <i class="fab fa-paypal"></i></a>
     <a href="#" class="link">Tumblr <i class="fab fa-tumblr"></i></a>
 
+    <!-- فاصل وخانتان فارغتان -->
+    <hr>
+    <a href="#" class="link">اسم الموقع <i class="fa-solid fa-star"></i></a>
+    <a href="#" class="link">اسم الموقع <i class="fa-solid fa-star"></i></a>
+    <hr>
+    <a href="#" class="link">اسم الموقع <i class="fa-solid fa-star"></i></a>
+    <a href="#" class="link">اسم الموقع <i class="fa-solid fa-star"></i></a>
+
     <footer>© 2025 - صُنع بحب ❤️</footer>
   </div>
 
-  <!-- زر الصعود للأعلى في الأسفل يمين -->
   <button id="toTop" title="العودة للأعلى">⬆</button>
 
   <script>
-    // تبديل الوضع الليلي والنهاري
     const toggleBtn = document.getElementById('themeToggle');
     toggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('dark');
@@ -209,13 +218,11 @@
       localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
     });
 
-    // حفظ الوضع المختار
     if (localStorage.getItem('theme') === 'dark') {
       document.body.classList.add('dark');
       toggleBtn.textContent = '☀️';
     }
 
-    // زر الصعود للأعلى
     const toTop = document.getElementById('toTop');
     window.addEventListener("scroll", () => {
       if (document.documentElement.scrollTop > 50) {
